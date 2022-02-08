@@ -1,0 +1,36 @@
+(base) jeongjiwon@jeongjiwon-ui-MacBookPro test % time cat ./corpus.shuf.valid.tok.bpe.head-1000.en | python ../translate.py --model_fn ../models/models.20220122/enko.bs-160.max_length-64.dropout-2.ws-512.hs-768.n_layers-4.iter_per_update-2.24.1.26-3.51.1.49-4.46.pth --gpu_id -1 --lang enko --beam_size 5 | python ../detokenizer.py | mecab -O wakati | ./multi-bleu.perl ./corpus.shuf.valid.tok.bpe.head-1000.detok.tok.ko 
+
+30epoch 데이터 결과
+Epoch 30 - |param|=6.03e+03 |g_param|=8.59e+04 loss=1.2225e+00 ppl=3.40
+Validation - loss=1.4875e+00 ppl=4.43 best_loss=inf best_ppl=inf
+BLEU = 34.02, 63.0/40.2/27.5/19.5 (BP=0.997, ratio=0.997, hyp_len=28076, ref_len=28173)
+
+29epoch 데이터 결과
+Epoch 29 - |param|=5.98e+03 |g_param|=8.96e+04 loss=1.2293e+00 ppl=3.42
+Validation - loss=1.4877e+00 ppl=4.43 best_loss=1.4868e+00 best_ppl=4.42
+BLEU = 34.50, 63.3/40.5/27.8/19.9 (BP=0.999, ratio=0.999, hyp_len=28155, ref_len=28173)
+
+28epoch 데이터 
+Epoch 28 - |param|=5.96e+03 |g_param|=8.97e+04 loss=1.2398e+00 ppl=3.45
+Validation - loss=1.4899e+00 ppl=4.44 best_loss=1.4868e+00 best_ppl=4.42
+BLEU = 33.89, 62.9/39.9/27.2/19.3 (BP=1.000, ratio=1.005, hyp_len=28319, ref_len=28173)
+
+27epoch 데이터
+Epoch 27 - |param|=5.93e+03 |g_param|=9.22e+04 loss=1.2346e+00 ppl=3.44
+Validation - loss=1.4868e+00 ppl=4.42 best_loss=1.4909e+00 best_ppl=4.44
+BLEU = 34.64, 63.5/40.7/28.1/20.2 (BP=0.995, ratio=0.995, hyp_len=28021, ref_len=28173)
+
+26epoch 모델
+Epoch 26 - |param|=5.91e+03 |g_param|=1.82e+05 loss=1.2385e+00 ppl=3.45
+Validation - loss=1.4932e+00 ppl=4.45 best_loss=1.4909e+00 best_ppl=4.44
+BLEU = 34.29, 63.5/40.9/28.0/20.1 (BP=0.986, ratio=0.986, hyp_len=27779, ref_len=28173)
+
+25epoch 모델
+Epoch 25 - |param|=5.89e+03 |g_param|=4.56e+04 loss=1.2470e+00 ppl=3.48
+Validation - loss=1.4909e+00 ppl=4.44 best_loss=1.4941e+00 best_ppl=4.46
+BLEU = 33.90, 62.5/39.9/27.3/19.4 (BP=1.000, ratio=1.007, hyp_len=28365, ref_len=28173)
+
+24epoch 모델
+Epoch 24 - |param|=5.86e+03 |g_param|=1.82e+05 loss=1.2567e+00 ppl=3.51
+Validation - loss=1.4941e+00 ppl=4.46 best_loss=1.4947e+00 best_ppl=4.46
+BLEU = 33.61, 62.1/39.7/26.9/19.2 (BP=1.000, ratio=1.013, hyp_len=28527, ref_len=28173)

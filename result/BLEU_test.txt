@@ -1,0 +1,4 @@
+27epoch의 모델의 BLEU가 가장 높으므로 이 모델을 통해 test-data의 BLEU 측정
+time cat ./corpus.shuf.test.tok.bpe.head-1000.en | python ../translate.py --model_fn ../models/models.20220122/enko.bs-160.max_length-64.dropout-2.ws-512.hs-768.n_layers-4.iter_per_update-2.27.1.23-3.44.1.49-4.42.pth --gpu_id -1 --lang enko --beam_size 5 | python ../detokenizer.py | mecab -O wakati | ./multi-bleu.perl ./corpus.shuf.test.tok.bpe.head-1000.detok.tok.ko 
+
+BLEU = 34.00, 62.6/40.0/27.3/19.5 (BP=1.000, ratio=1.007, hyp_len=28820, ref_len=28612)

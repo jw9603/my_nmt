@@ -1,0 +1,36 @@
+seq2seq모델의 번역 결과
+
+(base) jeongjiwon@jeongjiwon-ui-MacBookPro my_nmt % head -n 5000 ./data/corpus.shuf.test.tok.bpe.en | tail -n 5 | python translate.py --model_fn ./models/models.20220115/enko.bs-256.max_length-64.dropout-2.ws-512.hs-768.n_layers-4.iter_per_update-2.20.1.88-6.54.2.15-8.63.pth --gpu_id -1 --batch_size 2 --beam_size 1 | python ./detokenizer.py ; echo '--------------------------------------------------------------------------------------' ; head -n 5000 ./data/corpus.shuf.test.ko.tsv | tail -n 5
+대법원은 29일 오후 9시 29분께 보험사 소속 보험사 A씨(55)가 보험사에 낸 보험금을 청구하고 김씨가 낸 서면재판을 열어달라고 2월 밝혔다.
+윤정수씨는 “뉴스뉴스 4건, 자살사고가 대부분이고, 모든 언론사들이 자살을 저지른 것”이라고 비판했다.
+이를 통해 통계자료를 분석하고 분석하고, 맞춤형 사업을 효율적으로 추진하기 위해서는 효율적인 사업이 가능하다.
+위원회는 다음 각 호의 사항을 심의·의결하고, 이를 심의한다.
+인테리어 촬영이 금지된 곳이 많아서 사진과 사진을 많이 사는 사람들도 많다.
+--------------------------------------------------------------------------------------
+대법원은 16일 개인택시기사 김모(55)씨가 A보험사를 상대로 낸 손해배상 청구소송을 전원합의체에 회부하고 11월 29일 오후 2시 공개변론을 연다고 밝혔다.
+윤정주 위원은 “MBN 뉴스가 종편4사 통틀어 성폭력 보도와 살인 보도를 가장 많이 하고 있다”고 비판했다.
+이를 통해 통계 수급과 문제점 분석 등이 쉬워졌고 맞춤형 개선사업도 효율적으로 추진할 수 있게 됐다.
+위원회는 다음 각 호의 사항을 협의 또는 심의ㆍ의결한다.
+내부 사진 촬영이 금지된 곳이 많아서 안내 책자와 CD를 사는 사람들도 많다.
+
+(base) jeongjiwon@jeongjiwon-ui-MacBookPro my_nmt % head -n 5000 ./data/corpus.shuf.test.en.tsv | tail -n 5 
+
+The Supreme Court said on the 16th that it will refer the suit filed by Kim (55), a private taxi driver, against A insurance company to en bank session and hold an open hearing at 2 p.m. on Nov. 29.
+Yoon Jeong-joo criticized the news, saying, “MBN News reports sexual violence and murder most of all four companies.“
+This makes it easier to supply statistics and analyze problems, and to efficiently implement customized improvement projects.
+The committee shall consult, deliberate, and decide the following matters:
+There are many places where interior photography is prohibited, so many people buy brochures and CDs.
+
+구글번역기 결과는??
+>>대법원은 16일 개인택시운전사 김씨(55)씨가 A보험사를 상대로 제기한 소송을 은행에 회부하고 오후 2시 공판을 열겠다고 밝혔다. 11월 29일.
+윤정주는 "MBN뉴스가 4개 기업 대부분이 성폭행과 살인 사건을 보도했다"고 비판했다.
+이를 통해 통계를 제공하고 문제점을 분석하고 맞춤형 개선 프로젝트를 효율적으로 구현할 수 있습니다.
+위원회는 다음 사항을 협의·심의·결정한다.
+실내 촬영이 금지된 곳이 많아 브로슈어와 CD를 구입하는 사람들이 많다.
+
+4. 영어 원문
+The Supreme Court said on the 16th that it will refer the suit filed by Kim (55), a private taxi driver, against A insurance company to en bank session and hold an open hearing at 2 p.m. on Nov. 29.
+Yoon Jeong-joo criticized the news, saying, “MBN News reports sexual violence and murder most of all four companies.“
+This makes it easier to supply statistics and analyze problems, and to efficiently implement customized improvement projects.
+The committee shall consult, deliberate, and decide the following matters:
+There are many places where interior photography is prohibited, so many people buy brochures and CDs.
